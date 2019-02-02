@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
-import Mount from './Mount';
+import LifeCycle from './LifeCycle';
 
 
 function TabContainer({ children, dir }) {
@@ -66,9 +66,9 @@ class TabBar extends React.Component {
                     index={this.state.value}
                     onChangeIndex={this.handleChangeIndex}>
 
-                    <TabContainer dir={theme.direction}><Mount phase='mount'/></TabContainer>
-                    <TabContainer dir={theme.direction}><Mount phase='update' /></TabContainer>
-                    <TabContainer dir={theme.direction}><Mount phase='unmount' /></TabContainer>
+                    <TabContainer dir={theme.direction}><LifeCycle phase='mount'/></TabContainer>
+                    <TabContainer dir={theme.direction}><LifeCycle phase='update' /></TabContainer>
+                    <TabContainer dir={theme.direction}><LifeCycle phase='unmount' /></TabContainer>
                 </SwipeableViews>
             </div>
         );
